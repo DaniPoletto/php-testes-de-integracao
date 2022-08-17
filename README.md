@@ -6,7 +6,10 @@
 - Um usuário não pode dar dois lances consecutivos
 - Um usuário só pode dar no máximo 5 lances
 - Testes devem ser criados para verificar essas especificações
-- Leilões com mais de uma semana devem ser finalizados 
+- Leilões com mais de uma semana devem ser finalizados
+
+### Testes de intergação
+Testam integração entre classes/módulos (banco, api)
 
 ### Diferença entre Equals e Same
 - Equals ==
