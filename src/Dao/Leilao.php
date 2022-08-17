@@ -45,7 +45,7 @@ class Leilao
      */
     private function recuperarLeiloesSeFinalizado(bool $finalizado): array
     {
-        $sql = 'SELECT * FROM leiloes WHERE finalizado = ' . ($finalizado ? 1 : 0);
+        $sql = 'SELECT  FROM leiloes WHERE finalizado = ' . ($finalizado ? 1 : 0);
         $stm = $this->con->query($sql, \PDO::FETCH_ASSOC);
 
         $dados = $stm->fetchAll();
