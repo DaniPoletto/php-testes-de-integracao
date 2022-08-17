@@ -9,9 +9,9 @@ class Leilao
 {
     private $con;
 
-    public function __construct()
+    public function __construct($con)
     {
-        $this->con = ConnectionCreator::getConnection();
+        $this->con = $con;
     }
 
     public function salva(ModelLeilao $leilao): void
