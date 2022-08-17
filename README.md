@@ -9,7 +9,7 @@
 - Leilões com mais de uma semana devem ser finalizados
 
 ### Testes de intergação
-Testam integração entre classes/módulos (banco, api)
+Testam integração entre várias classes/módulos e sistema externo (banco, api)
 
 ### Diferença entre Equals e Same
 - Equals ==
