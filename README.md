@@ -22,4 +22,6 @@ self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
 
 ### Performance
 - Utilizar um banco de dados em memória
-
+- Uitlizar transações
+- Utilizar um banco de teste (MySql)
+- Não fazer testes em produção
