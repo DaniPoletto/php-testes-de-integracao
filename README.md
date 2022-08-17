@@ -20,3 +20,6 @@ Testam integração entre várias classes/módulos e sistema externo (banco, api
 self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
 ```
 
+### Performance
+- Utilizar um banco de dados em memória
+
