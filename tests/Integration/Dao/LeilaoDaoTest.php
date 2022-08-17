@@ -9,10 +9,21 @@ use Alura\Leilao\Infra\ConnectionCreator;
 
 class LeilaoDaoTest extends TestCase
 {
+    /**
+     * @var \PDO
+     */
+    private $pdo;
+    protected function setUp() : void
+    {
+        $this->pdo = ConnectionCreator::getConnection();
+        $this->pdo->beginTransaction();
+    }
+
     public function testInsercaoEBuscaDevemFuncionar()
     {
         $leilao = new Leilao('Fiat 147 0KM');
-        $leilaoDao = new LeilaoDao(ConnectionCreator::getConnection());
+        
+        $leilaoDao = new LeilaoDao($this->pdo);
 
         $leilaoDao->salva($leilao);
         $leiloes = $leilaoDao->recuperarNaoFinalizados();
@@ -20,5 +31,10 @@ class LeilaoDaoTest extends TestCase
         self::assertCount(1, $leiloes);
         self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
         self::assertSame('Fiat 147 0KM', $leiloes[0]->recuperarDescricao());
+    }
+
+    protected function tearDown() : void
+    {
+        $this->pdo->rollBack();
     }
 }
