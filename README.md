@@ -8,3 +8,12 @@
 - Testes devem ser criados para verificar essas especificações
 - Leilões com mais de uma semana devem ser finalizados 
 
+### Diferença entre Equals e Same
+- Equals ==
+- Same ====
+
+### Contém apenas intancias de um tipo
+```
+self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
+```
+
