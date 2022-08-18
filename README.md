@@ -33,3 +33,22 @@ Quebram o padrão AAA, mas podem ser interessantes em alguns casos.
 ```
 vendor\bin\phpunit --testsuite="integration"
 ```
+
+### Testes API
+- Se está disponível
+- Se o código de resposta HTTP enviado é o correto
+- Se o corpo da requisição retorna o conteúdo correto
+
+#### Subir o servidor pra uso na API
+```
+php -S localhost:8080
+```
+
+#### Retornar leilões não finalizados
+URL: http://localhost:8080/rest.php
+Verbo: GET
+Não é necessário passar nenhum paramêtro.
+
+```
+Frameworks como Symfony já possuem ferramentas para testes em API.
+```
