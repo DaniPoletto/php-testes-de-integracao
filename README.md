@@ -46,7 +46,9 @@ php -S localhost:8080
 
 #### Retornar leilões não finalizados
 URL: http://localhost:8080/rest.php
+
 Verbo: GET
+
 Não é necessário passar nenhum paramêtro.
 
 ```
