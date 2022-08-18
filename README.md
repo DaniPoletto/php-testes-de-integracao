@@ -25,3 +25,11 @@ self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
 - Uitlizar transações
 - Utilizar um banco de teste (MySql)
 - Não fazer testes em produção
+
+### Asserts intermediários
+Quebram o padrão AAA, mas podem ser interessantes em alguns casos.
+
+### Rodar apenas uma suite de testes
+```
+vendor\bin\phpunit --testsuite="integration"
+```
