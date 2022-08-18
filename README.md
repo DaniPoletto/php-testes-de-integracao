@@ -52,3 +52,36 @@ Não é necessário passar nenhum paramêtro.
 ```
 Frameworks como Symfony já possuem ferramentas para testes em API.
 ```
+
+### Testes no Postman
+Na aba Tests é possível fazer alguns testes:
+
+```
+pm.test("Código de status da resposta deve ser 200", () => {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Resposta deve estar em Json", () => {
+    pm.response.to.be.json;
+});
+
+pm.test('Resposta deve estar no formato de leilao', () => {
+    const schema = {
+        required : ['descricao', 'estaFinalizado'],
+        properties : {
+            descricao : {
+                type : "string",
+            }, 
+            estaFinalizado : {
+                type: "boolean"
+            }
+        }
+    };
+
+    const leiloes = pm.response.json();
+    leiloes.forEach(leilao => {
+        pm.expect(tv4.validate(leilao, schema)).to.be.true;
+        pm.expect(leilao.estaFinalizado).to.be.false;
+    });
+});
+```
