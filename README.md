@@ -13,9 +13,9 @@ Testam integração entre várias classes/módulos e sistema externo (banco, api
 
 ### Diferença entre Equals e Same
 - Equals ==
-- Same ====
+- Same ===
 
-### Contém apenas intancias de um tipo
+### Contém apenas instancias de um tipo
 ```
 self::assertContainsOnlyInstancesOf(Leilao::class, $leiloes);
 ```
